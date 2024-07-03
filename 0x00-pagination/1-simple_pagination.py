@@ -47,4 +47,3 @@ class Server:
         if e > length + 1 or s > length:
             return []
         return data_f
-
