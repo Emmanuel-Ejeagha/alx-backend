@@ -9,6 +9,7 @@
     welcome_page:
         Renders and returns the HTML welcome page.
 """
+
 from flask_babel import Babel
 from flask import Flask, render_template, request
 
@@ -20,18 +21,23 @@ class Config:
         Timezone config
     """
     LANGUAGES = ["en", "fr"]
-    BABEL_DEFAULT_LOCALE = "en"
-    BABEL_DEFAULT_TIMEZONE = "UTC"
+    BABEL_DEFAULT_LOCALE = 'en'
+    BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 
+# Instantiate the flask application
 app = Flask(__name__)
-babel = Babel(app)
+
+# load configuration from class config object
 app.config.from_object(Config)
 
+# Instantiate Babel to manage localization and internationlization
+babel = Babel(app)
 
-@babel.localselector
+
+@babel.localeselector
 def get_locale() -> str:
-    """Determines the preferred language for the user
+    """Determines the preferred language for the user.
 
     Returns:
         str: Preferred language for the user.
@@ -44,10 +50,10 @@ def welcome_page() -> str:
     """Renders the HTML welcome page.
 
     Returns:
-        str: Rendered HTMl welcome page.
+        str: Rendered HTML welcome page.
     """
-    return render_template("3-index.html")
+    return render_template('3-index.html')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(port=5000, host='0.0.0.0')
