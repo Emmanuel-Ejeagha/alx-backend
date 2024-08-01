@@ -4,8 +4,20 @@
   "description": "### Back-end JavaScript ES6 Redis NodeJS ExpressJS Kue",
   "main": "index.js",
   "scripts": {
+    "dev": "babel-node 0-redis_client.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^3.1.4",
+    "redis": "^4.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.8",
+    "@babel/core": "^7.25.2",
+    "@babel/node": "^7.25.0",
+    "@babel/preset-env": "^7.25.3"
+  },
+  "keywords": []
 }
