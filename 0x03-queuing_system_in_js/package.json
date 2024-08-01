@@ -1,0 +1,11 @@
+{
+  "name": "0x03-queuing_system_in_js",
+  "version": "1.0.0",
+  "description": "### Back-end JavaScript ES6 Redis NodeJS ExpressJS Kue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
